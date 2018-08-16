@@ -1,0 +1,55 @@
+@model gamenight.Models.Game
+
+<h1>Game Night</h1>
+<p><a asp-controller="Game" asp-action="Dashboard">Home</a><span>   |   </span><a asp-controller="Home" asp-action="LogOut">Log Off</a></p>
+<hr>
+<br>
+
+<h2>@Model.Title on @Model.Platform
+
+    @foreach( var rev in @ViewBag.ThisParticularGame )
+    {
+        @if( @ViewBag.LoggedId == @rev.CreatedById )
+        {
+            <a asp-controller="Game" asp-action="DeleteGame" asp-route-id="@rev.GameId">Delete</a>
+        }
+        else
+        {
+            bool signedUp = false;
+            @foreach( var plan in @rev.Joiners )
+            {
+                if( @plan.User != null )
+                {
+                    if(( int ) @plan.User.UserId == ( int ) @ViewBag.LoggedId )
+                    {
+                        signedUp = true;
+                    }
+                }
+            }
+            @if( signedUp == false )
+            {
+                <a asp-controller="Game" asp-action="JoinGameGroup" asp-route-id="@rev.GameId">Join Party</a>
+            }
+            else
+            {
+                <a asp-controller="Game" asp-action="LeaveGameGroup" asp-route-id="@rev.GameId">Leave Party</a>
+            }
+        }
+    }
+
+</h2>
+
+<h3>Host:  @Model.CreatedBy.FirstName, aka: @Model.CreatedBy.GamerTag</h3>
+<br>
+<h3>Description:  </h3>
+<p>@Model.Description</p>
+
+<h3>Players:  </h3>
+<table>
+
+    @foreach( var rev in @Model.Joiners )
+    {
+        <p>@rev.User.FirstName, @rev.User.GamerTag</p>
+    }
+
+</table>

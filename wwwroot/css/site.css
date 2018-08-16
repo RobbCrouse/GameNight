@@ -37,3 +37,88 @@
 .red{
     color: red;
 }
+
+#Register{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+#Login{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+}
+
+#logRegBG{
+    background-size: cover;
+    width: 100%;
+    background-position: 100% 50%;
+    background-image: url('/images/overwatchTracer.jpg');
+}
+
+#partyCarousel{
+    margin-top: -10px;
+}
+
+.carousel-fade .carousel-inner .carousel-item{
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active.carousel-item-left, .carousel-fade .carousel-inner .active.carousel-item-right, .carousel-fade .carousel-inner .carousel-item {
+    opacity: .5;
+}
+
+.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left, .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.carousel-item-left, .carousel-fade
+    .carousel-inner .active.carousel-item-right, .carousel-fade .carousel-inner 
+    .carousel-item-next, .carousel-fade .carousel-inner .carousel-item-prev {
+    /* left: 0; */
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(1, 1);
+    }
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.15, 1.15);
+    }
+}
+
+.carousel-inner .item > img {
+    -webkit-animation: zoom 20s;
+    animation: zoom 20s;
+}
+
+#addGameBG{
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('/images/fortniteSaveTheWorld3.jpg');
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#addGameBG h1{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#addGameBG h4{
+    color: black;
+    text-shadow: white 0.1em 0.1em 0.1em;
+}

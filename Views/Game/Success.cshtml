@@ -1,3 +1,190 @@
+
+@model List<gamenight.Models.Game>
+
+<div asp-validation-summary="All"></div>
+@if( TempData["error"] != null )
+{
+    <p>@TempData["error"]</p>
+}
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GameNight</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Game" asp-action="AddNewGamePage">Add a New Game</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="partyCarousel" id="top" class="carousel carousel-fade" data-ride="carousel" data-interval="2500">
+    <ol class="carousel-indicators">
+        <li data-target="#partyCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#partyCarousel" data-slide-to="1"></li>
+        <li data-target="#partyCarousel" data-slide-to="2"></li>
+        <li data-target="#partyCarousel" data-slide-to="3"></li>
+        <li data-target="#partyCarousel" data-slide-to="4"></li>
+        <li data-target="#partyCarousel" data-slide-to="5"></li>
+        <li data-target="#partyCarousel" data-slide-to="6"></li>
+        <li data-target="#partyCarousel" data-slide-to="7"></li>
+        <li data-target="#partyCarousel" data-slide-to="8"></li>
+        <li data-target="#partyCarousel" data-slide-to="9"></li>
+        <li data-target="#partyCarousel" data-slide-to="10"></li>
+        <li data-target="#partyCarousel" data-slide-to="11"></li>
+        <li data-target="#partyCarousel" data-slide-to="12"></li>
+        <li data-target="#partyCarousel" data-slide-to="13"></li>
+        <li data-target="#partyCarousel" data-slide-to="14"></li>
+        <li data-target="#partyCarousel" data-slide-to="15"></li>
+        <li data-target="#partyCarousel" data-slide-to="16"></li>
+        <li data-target="#partyCarousel" data-slide-to="17"></li>
+        <li data-target="#partyCarousel" data-slide-to="18"></li>
+        <li data-target="#partyCarousel" data-slide-to="19"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/gameBanner01_warframe.jpg" alt="Warframe" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner02_leagueOfLegends.jpg" alt="League of Legends" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner03_monopoly.jpg" alt="Monopoly" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner04_PS4fifa.jpg" alt="FIFA on PS4" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner05_armyOfTwo.jpg" alt="Army Of TWO" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner06_fortniteSaveTheWorld2.jpg" alt="Fortnite: Save The World" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner07_ghostReconWildlands.jpg" alt="GhostRecon: Wildlands" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner08_seahawks.jpg" alt="Seahawks football game" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner09_RainbowSixSiege.jpg" alt="RainbowSix: Siege" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner10_scythe.jpg" alt="Scythe boardgame" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner11_overwatchRainbow.png" alt="Overwatch characters" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner12_halo5.jpg" alt="Halo 5" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner13_tokaido.jpg" alt="Tokaido boardgame" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner14_pathfinder.jpg" alt="Pathfinder boardgame" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner15_gearsOfWar4.jpg" alt="Gears of War 4" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner16_splatoon.jpg" alt="Splatoon" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner17_PoolHall.jpeg" alt="Pool table" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner18_teamfortressLoading.jpg" alt="Team Fortress 2" class="img-resonsive"/>
+        </div>
+        <div class="item">
+            <img src="~/images/gameBanner19_leagueOfLegendsRainbow.png" alt="League of Legends" class="img-resonsive"/>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#partyCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#partyCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+<h1>GameNight Party Finder</h1>
 <div class="red">
     <h1>Success!</h1>
 </div>
+
+<h3>Welcome, @ViewBag.RetrievedUser.FirstName!</h3>
+
+<div class="table-responsive col-lg-12" id="allGamesTableText">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Platform</th>
+                <th>Date and Time</th>
+                <th>Duration</th>
+                <th>Host, GamerTag</th>
+                <th>Number of Players</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var rev in Model )
+            {
+                <tr>
+                    <td><a asp-controller="Game" asp-action="ShowDetails" asp-route-id="@rev.GameId">@rev.Title</a></td>
+                    <td>@rev.Platform</td>
+                    <td>@rev.Date.Date.ToString( "MMM dd yyyy" ) &#64 @rev.Time.ToString( "h:mm tt" )</td>
+                    <td>@rev.Duration<span>   -   </span>@rev.TimeSpan</td>
+                    <td>@rev.CreatedBy.FirstName, @rev.CreatedBy.GamerTag</td>
+                    <td>@rev.Joiners.Count</td>
+                    <td>
+                        @if( @ViewBag.LoggedId == @rev.CreatedById )
+                        {
+                            <a asp-controller="Game" asp-action="DeleteGame" asp-route-id="@rev.GameId">Delete</a>
+                        }
+                        else
+                        {
+                            bool signedUp = false;
+                            @foreach( var plan in @rev.Joiners )
+                            {
+                                if( @plan.User != null )
+                                {
+                                    if(( int ) @plan.User.UserId == ( int ) @ViewBag.LoggedId )
+                                    {
+                                        signedUp = true;
+                                    }
+                                }
+                            }
+                            @if( signedUp == false )
+                            {
+                                <a asp-controller="Game" asp-action="JoinGameGroup" asp-route-id="@rev.GameId">Join</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Game" asp-action="LeaveGameGroup" asp-route-id="@rev.GameId">Leave</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<h4>
+    <a asp-controller="Game" asp-action="AddNewGamePage"><button type="submit" class="btn btn-info" id="gameBtns">Add a New Game!</button></a>
+</h4>
