@@ -1,0 +1,68 @@
+@using gamenight.Models
+@model gamenight.Models.UserViewModel
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GameNight</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">  
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container logReg img-fluid" id="logRegBG">
+    
+
+    <h1>Welcome to Game Night!</h1>
+    <div asp-validation-summary="All"></div>
+    @if(TempData["error"] != null)
+    {
+        <p>@TempData["error"]</p>
+    }
+
+    <div id="Register">
+        <h2>Register </h2>
+        <br>
+
+        <div class="form-group">
+            <form asp-controller="Home" asp-action="RegisterForm" method="Post">
+            
+                    <input class="form-control" asp-for="FirstName"/>
+                    <br>
+                    
+                    <input class="form-control" asp-for="LastName"/>
+                    <br>
+
+                    <input class="form-control" asp-for="GamerTag"/>
+                    <br>
+
+                    <input class="form-control" asp-for="Email"/>
+                    <br>
+
+                    <input class="form-control" asp-for="Password"/>
+                    <br>
+
+                    <input class="form-control" asp-for="PasswordConfirmation"/>
+                    <br>
+
+                    <button type="submit" class="btn btn-info" id="gameBtns">Sign Up Now!</button>
+                     
+            </form>
+        </div>
+    </div>
+
+    <div id="Login">
+        @Html.Partial( "LoginPage" )
+    </div>
+    
+<!-- </div> -->
+</img>
