@@ -1,0 +1,21 @@
+@model gamenight.Models.UserLogViewModel
+
+<div id="Login">
+<h2>Login </h2>
+<br>
+    <div class="form-group">
+        <form asp-controller="Home" asp-action="LoginForm" method="Post">
+                
+                <input class="form-control" asp-for="Email"/>
+                <br>
+
+                <input class="form-control" asp-for="Password"/>
+                <br>
+
+                <button type="submit" class="btn btn-info" id="gameBtns">Let's Play!</button>
+
+                <h4>@ViewBag.Login</h4>
+
+        </form>
+    </div>
+</div>

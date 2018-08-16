@@ -2,56 +2,199 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GameNight</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="RegisterNow">Login</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="RegisterNow">Join Now</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="myCarousel" id="top" class="carousel slide" data-ride="carousel" data-interval="4000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+        <li data-target="#myCarousel" data-slide-to="8"></li>
+        <li data-target="#myCarousel" data-slide-to="9"></li>
+        <li data-target="#myCarousel" data-slide-to="10"></li>
+        <li data-target="#myCarousel" data-slide-to="11"></li>
+        <li data-target="#myCarousel" data-slide-to="12"></li>
+        <li data-target="#myCarousel" data-slide-to="13"></li>
+        <li data-target="#myCarousel" data-slide-to="14"></li>
+        <li data-target="#myCarousel" data-slide-to="15"></li>
+        <li data-target="#myCarousel" data-slide-to="16"></li>
+        <li data-target="#myCarousel" data-slide-to="17"></li>
+        <li data-target="#myCarousel" data-slide-to="18"></li>
+        <li data-target="#myCarousel" data-slide-to="19"></li>
+        <li data-target="#myCarousel" data-slide-to="20"></li>
+        <li data-target="#myCarousel" data-slide-to="21"></li>
+        <li data-target="#myCarousel" data-slide-to="22"></li>
+        <li data-target="#myCarousel" data-slide-to="23"></li>
+        <li data-target="#myCarousel" data-slide-to="24"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <img src="~/images/B1_GameNightLogo.jpg" alt="GameNight logo" class="img-responsive"/>
             <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+                <h3>Register now and party up with people who love and play the same games as you!
+                    <a class="btn btn-default" asp-controller="Home" asp-action="RegisterNow">Register</a>
+                </h3>
             </div>
         </div>
         <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+            <img src="~/images/B2_fortniteBR.jpg" alt="Fortnite Battle Royale" class="img-responsive"/>
             <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+                <h3>Squad, or Duo, up for Fortnite Battle Royale</h3>
             </div>
         </div>
         <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
+            <img src="~/images/B3_ghostReconWildlands2.png" alt="Ghost Recon: Wildlands" class="img-responsive"/>
             <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+                <h3>Find a team of like-minded players to battle alongside!</h3>
             </div>
         </div>
         <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
+            <img src="~/images/B4_munchkin.jpg" alt="Munchkin boardgame" class="img-responsive"/>
             <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+                <h3>Looking for new people to throw down with?</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B5_teamfortressRainbow.png" alt="Team Fortress 2 characters" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Join the neverending battle between Red and Blue tonight!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B6_halo.jpg" alt="Halo" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Master Chief would be so proud.</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B7_overcooked2.png" alt="Overcooked 2" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>These dinners aren't gonna cook themselves.  Couch co-op to save the day!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B8_seaOfThieves.jpg" alt="Sea Of Thieves" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Whether you like your dogs scurvy or salty, put together a crew and set sail!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B9_destiny2.jpg" alt="Destiny 2" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>PvE, PvP, Raid and Hunt!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B10_fortniteSaveTheWorld.jpg" alt="Fortnite Save the World" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Party up, complete quest and event missions, farm PerkUps and crafting materials!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B11_miceAndMystics.jpg" alt="Mice and Mystics" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Band together and save the kingdom.</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B12_fifa.jpg" alt="FIFA soccer" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Start up a team or spark a new rivalry.</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B13_poker.jpeg" alt="Poker" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Wait a minute, you said you never played this before!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B14_pubg.jpg" alt="PUBG PlayerUnknown's BATTLEGROUNDS" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Find a team and come out on top!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B15_overwatch.jpg" alt="Overwatch" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Put together a team with some synergy and rule the map!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B16_MondayNightFootball.jpg" alt="Monday Night Football Schedule" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Meet up, or have some people over for the game.</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B17_battlefield1.jpg" alt="Battlefield" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Make strategies, talk tactics, and destroy your enemies.</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B18_contra.png" alt="Contra" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Classic co-op masterpiece!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B19_pcGamer.jpg" alt="PC gamers" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Host or join a LAN party</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B20_madden2.jpg" alt="Madden" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Get some help creating your MUT, team up and beat classic rivals, or trash talk some new rivals!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B21_leagueOfLegends2.jpg" alt="League of Legends battle" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Meet some new people to play this longtime favorite with!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B22_fortniteHalloween.jpg" alt="Fortnite Fortnitemares" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Event Party!!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B23_SwitchController.jpg" alt="Switch Controller" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Make new console friends!</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/B24_xb1controller.jpeg" alt="XBox 1 Controller" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Add to your Friends list, and team up for some of your favorites!</h3>
             </div>
         </div>
     </div>
@@ -65,42 +208,27 @@
     </a>
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+<div class="container marketing">
+    
+    <div class="row featurette">
+        <h3 class="featurette-heading">
+        Game Night is your one-stop site to find fellow gamers looking to play or watch the same games as you!  
+        </h3>
+        <p class="lead">
+        Are you tired of sitting in game lobbies with strangers and griefers?  Are you tired of wishing you had someone new to play
+        an amazing new boardgame with?  Are you tired of wishing you had someone to just throw the ball back to you?
+        </p>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+
+
+    <div class="row featurette">
+        <p class="lead">
+        This site was made for you and exists solely to add to your enjoyment of the games we all love.  Videogames, boardgames,
+        live sports, backyard games, whatever it may be, this is the place to find a teammate, group, clan, or human target!
+        
+        Whether you're looking for a party for the newest AAA game, or a co-op partner for a retro game, this is the place.  Find players
+        on the same platform to help with your difficult missions.  Find mentors to teach the ins and outs of crafting, or survivor squads
+        and stats.  Help a noob out with a steep learning curve or a total lack of tutorial missions.
+        </p>
     </div>
 </div>
