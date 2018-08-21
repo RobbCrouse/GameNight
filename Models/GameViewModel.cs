@@ -17,7 +17,7 @@ namespace gamenight.Models
 
         [Required( ErrorMessage = "Which Platform are you playing this game on?" )]
         [MinLength(2)]
-        [Display(Prompt = "Platform of Game; XB1, PC, boardgame, televised event, etc.")]
+        [Display(Prompt = "Platform: XB1, PC, board, backyard, etc.")]
         public string Platform { get; set; }
 
 

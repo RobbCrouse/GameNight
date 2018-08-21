@@ -120,13 +120,11 @@
 </div>
 
 
+<div id="titleAndUserSUCCESS">
+    <h1>GameNight Party Finder</h1>
 
-<h1>GameNight Party Finder</h1>
-<div class="red">
-    <h1>Success!</h1>
+    <h3>Welcome, @ViewBag.RetrievedUser.FirstName!</h3>
 </div>
-
-<h3>Welcome, @ViewBag.RetrievedUser.FirstName!</h3>
 
 <div class="table-responsive col-lg-12" id="allGamesTableText">
     <table class="table">
@@ -149,7 +147,7 @@
                     <td>@rev.Platform</td>
                     <td>@rev.Date.Date.ToString( "MMM dd yyyy" ) &#64 @rev.Time.ToString( "h:mm tt" )</td>
                     <td>@rev.Duration<span>   -   </span>@rev.TimeSpan</td>
-                    <td>@rev.CreatedBy.FirstName, @rev.CreatedBy.GamerTag</td>
+                    <td>@rev.CreatedBy.FirstName, <i>@rev.CreatedBy.GamerTag</i></td>
                     <td>@rev.Joiners.Count</td>
                     <td>
                         @if( @ViewBag.LoggedId == @rev.CreatedById )
@@ -186,5 +184,5 @@
 </div>
 
 <h4>
-    <a asp-controller="Game" asp-action="AddNewGamePage"><button type="submit" class="btn btn-info" id="gameBtns">Add a New Game!</button></a>
+    <a asp-controller="Game" asp-action="AddNewGamePage"><button type="submit" class="btn btn-info" id="gameBtnsSUCCESS">Add a New Game!</button></a>
 </h4>

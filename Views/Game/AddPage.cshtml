@@ -9,12 +9,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a asp-area="" asp-controller="Game" asp-action="Index" class="navbar-brand">GameNight</a>
+            <a asp-area="" asp-controller="Game" asp-action="Dashboard" class="navbar-brand">GameNight</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a></li>
-                <li><a class="align-right" asp-area="" asp-controller="Game" asp-action="Dashboard">Party Finder</a></li>
             </ul>
         </div>
     </div>
@@ -22,58 +21,67 @@
 
 <div class="container addGame img-fluid" id="addGameBG">
 
-
+    <div class="text-right">
     <h1>Create a Party!</h1>
+    </div>
+
     <div asp-validation-summary="All"></div>
 
-    <form asp-controller="Game" asp-action="CreateGameForm" method="Post">
+    <div class="text-right" id="GameFormStyle">
+        <form asp-controller="Game" asp-action="CreateGameForm" method="Post">
 
-        <div class="form-group row" id="GameAndPlatformFields">
-            <div class="col-md-3">
-                <input class="form-control" asp-for="Title"/><br>
+            <div class="form-group row" id="GameAndPlatformFields">
+                <div class="col-md-5"></div>
+                <div class="col-md-3 float-right">
+                    <input class="form-control" asp-for="Title"/><br>
+                </div>
+
+                <div class="col-md-4 float-right">
+                    <input class="form-control" asp-for="Platform"/><br>
+                </div>
             </div>
 
-            <div class="col-md-3">
-                <input class="form-control" asp-for="Platform"/><br>
-            </div>
-        </div>
-
-        <div class="form-group row" id="DateAndTimeFields">
-            <div class="form-group col-md-3">
-                <input class="form-control" asp-for="Date"/><br>
-            </div>
-
-            <div class="form-group col-md-3">
-                <input class="form-control" asp-for="Time"/><br>
-            </div>
-        </div>
-
-        <div class="form-group row" id="DurationAndTimeSpanFields">
-            <div class="form-group col-md-3">
-                <input class="form-control" asp-for="Duration"/>
+            <div class="form-group row" id="DateAndTimeFields">
+                <div class="col-md-5"></div>
+                <div class="form-group col-md-4">
+                    <input class="form-control" asp-for="Date"/><br>
+                </div>
+                
+                <div class="form-group col-md-3">
+                    <input class="form-control" asp-for="Time"/>
+                </div>
             </div>
 
-            <div class="form-group col-md-3">
-                <h4>
-                    <label asp-for="TimeSpan"></label>
-                        <select name="TimeSpan">
-                            <option value="Minutes">Minutes</option>
-                            <option value="Hours">Hours</option>
-                            <option value="Days">Days</option>
-                        </select>
-                </h4>
+            <div class="form-group row" id="DurationAndTimeSpanFields">
+                <div class="col-md-5"></div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" asp-for="Duration"/>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <h4>
+                        <label asp-for="TimeSpan"></label>
+                            <select name="TimeSpan">
+                                <option value="Minutes">Minutes</option>
+                                <option value="Hours">Hours</option>
+                                <option value="Days">Days</option>
+                            </select>
+                    </h4>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <input class="form-control" asp-for="Description"/><br>
-        </div>
+            <div class="form-group row" id="DescriptionField">
+                <div class="col-md-5"></div>
+                <div class="form-group col-md-7">
+                    <textarea class="form-control" asp-for="Description"></textarea><br>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <button type="submit" class="btn btn-info" id="gameBtns">Create Party</button>
-        </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-info" id="gameBtns">Create Party</button>
+            </div>
 
-    </form>
-
+        </form>
+    </div>
 <!-- </div> -->
 </img>
