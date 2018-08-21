@@ -14,6 +14,6 @@
 Basic Home page with information about the site and why users should give it a try.
 
 <p align="center">
-    <img src="https://github.com/RobbCrouse/GameNight/tree/master/demoImages/landingPage.png" width="2748px" height="2202px">
+    <img src="https://github.com/RobbCrouse/GameNight/tree/master/demoImages/landingPage.png" width="50%" height="50%">
 </p>
 
