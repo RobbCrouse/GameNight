@@ -20,28 +20,28 @@ Basic Home page with information about the site and why users should give it a t
 ### Login or Register Page
 New Users have the option to Register, while existing Users are able to Login to their account.  All fields have specific validations and custom error messages.
 
-<p>align="center">
+<p align="center">
     <img src="https://github.com/RobbCrouse/GameNight/blob/master/demoImages/loginPage.png">
 </p>
 
 ### Party Finder Page
 Users are personally welcomed and presented with a list of upcoming parties, including date and time, the platform of the game, who the host is, and how many people have alrady joined the party.  They have the option to click on individual games, which will take them to the ##### Details page for that party.  They also have an action available for each party depending on their current relationship to that party.  If they are the party creator or Host, they are able to delete the party, otherwise, they are given the options to join the party or leave, if they had previously joined.
 
-<p>align="center">
+<p align="center">
     <img src="https://github.com/RobbCrouse/GameNight/blob/master/demoImages/dashboardPage.png">
 </p>
 
 ### Detail Page
 Here Users are able to see a full description of the host's plan and a list of all party members.  Again, Users are presented with an appropriate action based on their relationship to the party.
 
-<p>align="center">
+<p align="center">
     <img src="https://github.com/RobbCrouse/GameNight/blob/master/demoImages/detailPage.png">
 </p>
 
 ### Create a Party Page
 Users can create a party of their own.  All fields have specific validations and custom error messages.
 
-<p>align="center">
+<p align="center">
     <img src="https://github.com/RobbCrouse/GameNight/blob/master/addPage.png">
 </p>
 
