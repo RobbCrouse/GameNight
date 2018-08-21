@@ -14,6 +14,6 @@
 Basic Home page with information about the site and why users should give it a try.
 
 <p align="center">
-    <![ScreenShot](/demoImages/landingPage.png)>
+    <img src="https://github.com/RobbCrouse/GameNight/blob/master/demoImages/landingPage.png">
 </p>
 
