@@ -34,10 +34,6 @@
     }
 }
 
-.red{
-    color: red;
-}
-
 #Register{
     vertical-align: top;
     display: inline-block;
@@ -116,9 +112,65 @@
 #addGameBG h1{
     color: white;
     text-shadow: black 0.1em 0.1em 0.1em;
+    padding-right: 25px;
 }
 
 #addGameBG h4{
     color: black;
     text-shadow: white 0.1em 0.1em 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#GameFormStyle{
+    padding-top: 47px;
+    padding-bottom: -25px;
+    padding-right: 25px;
+}
+
+#DateAndTimeFields{
+    margin-bottom: -20px;
+}
+
+#DurationAndTimeSpanFields{
+    margin-top: -20px;
+}
+
+#DescriptionField{
+    margin-top: -10px;
+}
+
+#gameDetailBG{
+    background-size: cover;
+    width: 100%;
+    min-height: 523px;
+    background-position: 50% 50%;
+    background-image: url('/images/teamfortress.jpg');
+    padding-top: 50px;
+    padding-left: 25px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#userPartyOptionDETAIL{
+    padding-top: 25px;
+    /* padding-bottom: 10px; */
+    margin-left: 75px;
+}
+
+#gameTitleDETAIL{
+    margin-top: -15px;
+}
+
+#gameBtnsSUCCESS{
+    margin-left: 20px;
+}
+
+#titleAndUserSUCCESS{
+    margin-left: 15px;
+}
+
+#copyrightText{
+    color: darkgray;
+    text-shadow: none;
 }

@@ -1,55 +1,74 @@
 @model gamenight.Models.Game
 
-<h1>Game Night</h1>
-<p><a asp-controller="Game" asp-action="Dashboard">Home</a><span>   |   </span><a asp-controller="Home" asp-action="LogOut">Log Off</a></p>
-<hr>
-<br>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Game" asp-action="Dashboard" class="navbar-brand">GameNight</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<h2>@Model.Title on @Model.Platform
+<div class="container detailContainer img-fluid" id="gameDetailBG">
 
-    @foreach( var rev in @ViewBag.ThisParticularGame )
-    {
-        @if( @ViewBag.LoggedId == @rev.CreatedById )
-        {
-            <a asp-controller="Game" asp-action="DeleteGame" asp-route-id="@rev.GameId">Delete</a>
-        }
-        else
-        {
-            bool signedUp = false;
-            @foreach( var plan in @rev.Joiners )
+    <h1 id="gameTitleDETAIL">@Model.Title on @Model.Platform
+
+        <div id="userPartyOptionDETAIL">
+            @foreach( var rev in @ViewBag.ThisParticularGame )
             {
-                if( @plan.User != null )
+                @if( @ViewBag.LoggedId == @rev.CreatedById )
                 {
-                    if(( int ) @plan.User.UserId == ( int ) @ViewBag.LoggedId )
+                    <a asp-controller="Game" asp-action="DeleteGame" asp-route-id="@rev.GameId">Delete</a>
+                }
+                else
+                {
+                    bool signedUp = false;
+                    @foreach( var plan in @rev.Joiners )
                     {
-                        signedUp = true;
+                        if( @plan.User != null )
+                        {
+                            if(( int ) @plan.User.UserId == ( int ) @ViewBag.LoggedId )
+                            {
+                                signedUp = true;
+                            }
+                        }
+                    }
+                    @if( signedUp == false )
+                    {
+                        <a asp-controller="Game" asp-action="JoinGameGroup" asp-route-id="@rev.GameId">Join Party</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Game" asp-action="LeaveGameGroup" asp-route-id="@rev.GameId">Leave Party</a>
                     }
                 }
             }
-            @if( signedUp == false )
-            {
-                <a asp-controller="Game" asp-action="JoinGameGroup" asp-route-id="@rev.GameId">Join Party</a>
-            }
-            else
-            {
-                <a asp-controller="Game" asp-action="LeaveGameGroup" asp-route-id="@rev.GameId">Leave Party</a>
-            }
+        </div>
+    </h1>
+
+    <h2>Host:  @Model.CreatedBy.FirstName, aka: <i>@Model.CreatedBy.GamerTag</i></h2>
+    
+    <h3>Description:  </h3>
+    <p>@Model.Description</p>
+    <br>
+
+    <h3>Players:  </h3>
+    <table>
+        @foreach( var rev in @Model.Joiners )
+        {
+            <p>@rev.User.FirstName, <i>@rev.User.GamerTag</i></p>
         }
-    }
+    </table>
 
-</h2>
-
-<h3>Host:  @Model.CreatedBy.FirstName, aka: @Model.CreatedBy.GamerTag</h3>
-<br>
-<h3>Description:  </h3>
-<p>@Model.Description</p>
-
-<h3>Players:  </h3>
-<table>
-
-    @foreach( var rev in @Model.Joiners )
-    {
-        <p>@rev.User.FirstName, @rev.User.GamerTag</p>
-    }
-
-</table>
+<!-- </div> -->
+</img>
