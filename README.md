@@ -14,6 +14,6 @@
 Basic Home page with information about the site and why users should give it a try.
 
 <p align="center">
-    <!.[.].(/demoImages/landingPage.png)>
+    <![ScreenShot](/demoImages/landingPage.png)>
 </p>
 
